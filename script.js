@@ -1,16 +1,12 @@
-// JavaScript propi del projecte
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Minecraft Guide carregada correctament.");
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Mostra per consola que la pàgina s'ha carregat correctament.
-  console.log("Cicles Formatius d'Informàtica carregat correctament.");
+  const pestanyes = document.querySelectorAll('[data-bs-toggle="tab"]');
 
-  // Quan es canvia de cicle, actualitzem el títol de la pestanya del navegador.
-  const links = document.querySelectorAll('[data-bs-toggle="tab"]');
-
-  links.forEach(link => {
-    link.addEventListener("shown.bs.tab", event => {
-      const nomCicle = event.target.textContent.trim();
-      document.title = `${nomCicle} - Cicles Formatius d'Informàtica`;
+  pestanyes.forEach(function (pestanya) {
+    pestanya.addEventListener("shown.bs.tab", function (event) {
+      const seccio = event.target.textContent.trim();
+      document.title = seccio + " - Minecraft Guide";
     });
   });
 });

@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #1b1b1b;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  background: #212529;
+  padding: 16px 20px;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  color: white;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.menu-btn {
+  border: 1px solid #198754;
+  border-radius: 6px;
+  background: #198754;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.menu-btn:hover {
+  background: #157347;
+}
+
+.menu-btn.active {
+  background: white;
+  color: #198754;
+}
+
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #198754, #14532d);
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 48px;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 45px auto;
+  padding: 0 20px;
+}
+
+.info-section[hidden] {
+  display: none !important;
+}
+
+.card {
+  background: #292929;
+  border: 2px solid #198754;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  color: #5be37d;
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.card h3 {
+  margin-top: 28px;
+}
+
+li {
+  margin-bottom: 9px;
+}
+
+.tip {
+  margin-top: 25px;
+  padding: 16px;
+  background: #d1e7dd;
+  color: #0f5132;
+  border-radius: 6px;
+}
+
+.tip.blue {
+  background: #cff4fc;
+  color: #055160;
+}
+
+.tip.red {
+  background: #f8d7da;
+  color: #842029;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+footer {
+  margin-top: 80px;
+  padding: 25px;
+  text-align: center;
+  background: #111111;
+  color: #aaaaaa;
+}
+
+@media (max-width: 700px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+}

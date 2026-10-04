@@ -1,0 +1,98 @@
+body {
+  background-color: #1b1b1b;
+  color: #eeeeee;
+}
+
+.navbar {
+  padding: 15px 0;
+}
+
+.menu-btn {
+  transition: 0.2s;
+}
+
+.menu-btn.active {
+  background-color: #ffffff;
+  color: #198754;
+  border-color: #ffffff;
+}
+
+.hero {
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #198754, #14532d);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.info-section {
+  display: none;
+}
+
+.info-section.active-section {
+  display: block;
+  animation: aparecer 0.3s ease;
+}
+
+.card {
+  background-color: #292929;
+  color: white;
+  border: 2px solid #198754;
+  border-radius: 12px;
+}
+
+.card h2 {
+  color: #5be37d;
+}
+
+.card h4 {
+  margin-top: 25px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 80px;
+  padding: 25px;
+  text-align: center;
+  background-color: #111111;
+  color: #aaaaaa;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .navbar .container {
+    gap: 15px;
+  }
+
+  .menu-btn {
+    font-size: 0.9rem;
+  }
+}
